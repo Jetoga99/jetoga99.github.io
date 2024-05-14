@@ -11,8 +11,14 @@ const Navbar = () => {
       const sections = document.querySelectorAll('section');
       const navlinks = document.querySelectorAll('#navbar .nav-link');
       const mobilenav = document.getElementById('mobilen');
+      const toggleThemeBtn = document.getElementById('toggle-theme-btn');
+
 
       console.log(mobilenav)
+      toggleThemeBtn.addEventListener('click', function() {
+        // Toggle (alternar) la clase 'dark-theme' en el body
+        document.body.classList.toggle('dark-theme');
+      });
       if (target.classList.contains('mobile-nav-toggle')) {
         navbar.classList.toggle('navbar-mobile');
 

@@ -1,0 +1,122 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About Me",
+        "portfolio": "Portfolio",
+        "desc1": "Developer and ",
+        "desc2": "Data Analyst"
+    },
+    "about": {
+        "header1": "ABOUT ME",
+        "title1": "Developer & Data Analyst",
+        "desc": "Hello! I'm Jesús, I'm a data analyst and FullStack developer. During my university studies, I developed a keen interest in programming, statistics, and machine learning techniques.",
+        "resume": "Resume",
+        "education": {
+            "title": "Education",
+            "degrees": [
+                {
+                    "degree": "Software Development Engineering",
+                    "years": "2024 - 2026",
+                    "location": "Virtual University of the State of Guanajuato"
+                },
+                {
+                    "degree": "Bachelor of Physics",
+                    "years": "2018 - 2023",
+                    "location": "National Autonomous University of Mexico"
+                }
+            ]
+        },
+        "certifications": {
+            "title": "Courses and Certifications",
+            "certs": [
+                {
+                    "course": "Google Data Analytics",
+                    "year": "2022",
+                    "location": "Coursera"
+                },
+                {
+                    "course": "NMA Deep Learning",
+                    "year": "2022",
+                    "location": "Neuromatch Academy"
+                },
+                {
+                    "course": "Scientific Computing With Python",
+                    "year": "2022",
+                    "location": "freeCodeCamp"
+                }
+            ]
+        },
+        "jobs": {
+            "title": "Professional Experience",
+            "exp": [
+                {
+                    "title": "SR BI Analyst Marketing & Promotion",
+                    "company": "Samsung",
+                    "location": "CDMX",
+                    "duration": "Nov 2023 - Present",
+                    "description": "Maintenance and updating of dashboards in Excel, using formulas and Visual Basic. Proposals for migrating to PowerBI dashboards to enable a more innovative maintenance cycle and less susceptible to human error. Python code creation for data extraction on platforms for subsequent data transformation and analysis.",
+                    "technologies": "Excel, VBA, Python, PowerBI"
+                },
+                {
+                    "title": "Data Analyst",
+                    "company": "SOPRIS Technologies, INC.",
+                    "location": "CDMX",
+                    "duration": "Aug - Oct 2023",
+                    "description": "Maintenance and development of solutions for report creation through Plotly, Dash. Development using Git and data extraction using BigQuery for subsequent manipulation using Python. Creation and maintenance of dashboards using Looker Studio. Study and documentation of load flows in Looker.",
+                    "technologies": "Python, Dash, Git, BigQuery, Looker Studio"
+                },
+                {
+                    "title": "Social Service",
+                    "company": "IIMAS, UNAM",
+                    "location": "CDMX",
+                    "duration": "Feb - Sep 2023",
+                    "description": "Development of improvements on a website dedicated to tweet analysis with a primary focus on COVID-19, creation of forms for user creation, updating of the database through CRUD operations with MySQL, React and integration with Django. Implementation of code for the analysis of tweets stored in MongoDB.",
+                    "technologies": "Python, Django, React, Postman, MySQL, MongoDB"
+                },
+                {
+                    "title": "Data Mining and Credit Specialist",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "May - Jul 2023",
+                    "description": "Process automation for credit assignment through decision policies through data extraction from Credit Bureau products (Watch, Adviser). Database development for subsequent exploitation and obtaining of indicators or delivery to suppliers.",
+                    "technologies": "Python, R Studio, Excel, PowerBI"
+                },
+                {
+                    "title": "Risk Analyst",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "Jan - Apr 2023",
+                    "description": "Preparation and updating of daily reports for early detection of portfolio deterioration. Creation of dashboards using Python and PowerBI to observe historical data in order to detect patterns to modify risk policies. Creation of workflows in Power Automate for automatic report delivery.",
+                    "technologies": "Python, R Studio, Excel, PowerBI, Power Automate"
+                },
+                {
+                    "title": "Risk Intern",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "Oct 2022 - In 2023",
+                    "description": "Workflow design for process automation in Excel through Python with the objective of obtaining metrics. Data cleaning and transformation using Python and R Studio. Creation of reports for management presentation.",
+                    "technologies": "Python, R Studio, Excel"
+                },
+                {
+                    "title": "Freelance Web Development",
+                    "company": "Generation",
+                    "location": "CDMX",
+                    "duration": "Aug - Oct 2022",
+                    "description": "Layout and design of a website using CSS, HTML and Figma, interaction development with the page using JavaScript and back-end development by designing a database with MySQL and integration with Java.",
+                    "technologies": "CSS, HTML, Figma, JavaScript, MySQL, Java, Git, Github"
+                }
+            ]
+        }
+    },
+    "portfolio": {
+        "projects": [
+            {
+                "imageSrc": "./Miopers.png",
+                "title": "MiOpERS",
+                "text": "Improvements on a website for COVID-19 tweet analysis, including user forms and CRUD operations with MySQL in Django. Integration of React and MongoDB for tweet analysis.",
+                "icons": ["faReact", "faJs", "faDatabase"],
+                "refs": "http://www.miopers.unam.mx/covid/"
+            }
+        ]
+    }
+}

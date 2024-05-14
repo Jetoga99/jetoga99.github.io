@@ -5,8 +5,11 @@ import { faPython, faGitAlt, faGithub, faJsSquare, faJava, faCss3Alt, faHtml5 } 
 import { faDatabase, faFileWord, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import './styles.css'; // Asegúrate de tener los estilos CSS asociados
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useTranslation } from 'react-i18next';
 
 export function About() {
+  const { t, i18n } = useTranslation('global');
+
   const IconBox = ({ icon, color }) => (
     <div className="icon-box">
       <FontAwesomeIcon icon={icon} style={{ color }} />
@@ -16,10 +19,10 @@ export function About() {
   function ResumeEdu(props) {
     return (
       <div className="resume-item">
-        <h4>{props.title}</h4>
+        <h4>{t(props.title)}</h4>
         <h5>{props.duration}</h5>
         <p>
-          <em>{props.university}</em>
+          <em>{t(props.university)}</em>
         </p>
       </div>
     );
@@ -28,34 +31,32 @@ export function About() {
   function ResumePro(props) {
     return (
       <div className="resume-item">
-        <h4>{props.title}</h4>
+        <h4>{t(props.title)}</h4>
         <h5>
-          {props.company} | {props.location} | {props.duration}
+          {t(props.company)} | {t(props.location)} | {props.duration}
         </h5>
-        <p>{props.description}</p>
+        <p>{t(props.description)}</p>
         <p>
-          <strong>Tecnologías utilizadas:</strong> {props.technologies}
+          <strong> {t(props.technologies)}</strong>
         </p>
       </div>
     );
   }
 
+
   return (
     <section id="about" className="about">
       <div className="about-me container">
         <div className="section-title">
-          <h2>Acerca de Mí</h2>
+          <h2>{t("about.header1")}</h2>
         </div>
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
             <img src="https://unavatar.io/Jetoga99" className="img-fluid" alt="" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
-            <h3>Desarrollador &amp; Analista de Datos</h3>
-            <p className="fst-italic">
-              ¡Hola! Soy Jesús, soy un analista de datos y desarrollador FullStack.
-              En mis estudios universitarios desarrollé un gran interés por la programación, estadística y técnicas de machine learning.
-            </p>
+            <h3>{t("about.title1")}</h3>
+            <p className="fst-italic">{t("about.desc")}</p>
             <div className="row">
               <div className="col-lg-6">
                 <ul>
@@ -63,7 +64,7 @@ export function About() {
                     <i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>24</span>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Ciudad de México, México</span>
+                    <i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Ciudad de México</span>
                   </li>
                 </ul>
               </div>
@@ -104,91 +105,42 @@ export function About() {
       </div>
       <div className="container">
         <div className="section-title">
-          <h2>Resumen</h2>
-          <p>Un poco de mí</p>
+          <h2>{t("about.resume")}</h2>
         </div>
         <div className="row">
           <div className="col-lg-6">
-            <h3 className="resume-title">Educación</h3>
-            <ResumeEdu
-              title="Ingeniería en Desarrollo de Software"
-              duration="2024 - 2026"
-              university="Universidad Virtual del Estado de Guanajuato"
-            />
-            <ResumeEdu
-              title="Licenciatura en Física"
-              duration="2018 - 2023"
-              university="Universidad Nacional Autónoma de México"
-            />
-            <h3 className="resume-title">Cursos y Certificaciones</h3>
-            <ResumeEdu title="Analisis de Datos de Google" duration="2022" university="Coursera" />
-            <ResumeEdu title="NMA Deep Learning" duration="2022" university="Neuromatch Academy" />
-            <ResumeEdu title="Scientific Computing with Python" duration="2022" university="freeCodeCamp" />
-          </div>
+            <h3 className="resume-title">{t("about.education.title")}</h3>
+            {t('about.education.degrees', { returnObjects: true }).map((degree, index) => (
+                    <ResumeEdu
+                      key={index}
+                      title={degree.degree}
+                      duration={degree.years}
+                      university={degree.location}
+                    />
+                  ))}
+            <h3 className="resume-title">{t("about.certifications.title")}</h3>
+            {t('about.certifications.certs', { returnObjects: true }).map((cert, index) => (
+                    <ResumeEdu
+                      key={index}
+                      title={cert.course}
+                      duration={cert.year}
+                      university={cert.location}
+                    />
+                  ))} 
+         </div>
           <div className="col-lg-6">
-            <h3 className="resume-title">Experiencia Profesional</h3>
-            <ResumePro
-              title="ANALISTA BI SR Marketing & Promotion"
-              company="Samsung"
-              location="CDMX"
-              duration="Nov 2023 - Presente"
-              description="Mantenimiento y actualización de dashboards en Excel, mediante el uso de fórmulas y Visual Basic. Propuestas de migración a dashboards en PowerBI que permitieran un ciclo de mantenimiento más innovador y menos susceptible al error humano. Creación de código en Python para la extracción de datos en plataformas para posterior transformación y análisis de los datos."
-              technologies="Excel, VBA, Python, PowerBI"
-            />
-
-            <ResumePro
-              title="ANALISTA DE DATOS"
-              company="SOPRIS Technologies, INC."
-              location="CDMX"
-              duration="Ago - Oct 2023"
-              description="Mantenimiento y desarrollo de soluciones para creación de reportes a través de Plotly, Dash. Desarrollo mediante Git y extracción de datos mediante BigQuery para su posterior manipulación mediante Python. Creación y mantenimiento de dashboards mediante Looker Studio. Estudio y documentación de flujos de carga en Looker."
-              technologies="Python, Dash, Git, BigQuery, Looker Studio"
-            />
-
-            <ResumePro
-              title="SERVICIO SOCIAL"
-              company="IIMAS, UNAM"
-              location="CDMX"
-              duration="Feb - Sep 2023"
-              description="Desarrollo de mejoras en página web dedicada al análisis de tweets con enfoque principal al COVID-19, creación de formularios para la creación de usuarios, actualización de base de datos mediante operaciones CRUD con MySQL, React e integración con Django. Implementación de código para el análisis de tweets almacenados en MongoDB."
-              technologies="Python, Django, React, Postman, MySQL, MongoDB"
-            />
-
-            <ResumePro
-              title="ESPECIALISTA EN MINERÍA DE DATOS Y CRÉDITO"
-              company="Fincomún"
-              location="CDMX"
-              duration="May - Jul 2023"
-              description="Automatización de procesos para la asignación de créditos mediante políticas de decisión a través de la extracción de datos de productos de Buró de Crédito (Watch, Adviser). Elaboración de bases de datos para su posterior explotación y obtención de indicadores o entrega a proveedores."
-              technologies="Python, R Studio, Excel, PowerBI"
-            />
-
-            <ResumePro
-              title="ANALISTA DE RIESGOS"
-              company="Fincomún"
-              location="CDMX"
-              duration="Ene - Abr 2023"
-              description="Elaboración y actualización de reportes diarios para la detección temprana del deterioro de la cartera. Creación de dashboards mediante Python y PowerBI para observar datos históricos con el fin de detectar patrones para modificar políticas de riesgo. Creación de flujos de trabajo en Power Automate para el envío automático de reportes."
-              technologies="Python, R Studio, Excel, PowerBI, Power Automate"
-            />
-
-            <ResumePro
-              title="BECARIO DE RIESGOS"
-              company="Fincomún"
-              location="CDMX"
-              duration="Oct 2022 - En 2023"
-              description="Diseño de flujos de trabajo para la automatización de procesos en Excel a través de Python con el objetivo de obtención de métricas. Limpieza y transformación de datos mediante Python y R Studio. Creación de reportes para presentar a gerencia."
-              technologies="Python, R Studio, Excel"
-            />
-
-            <ResumePro
-              title="DESARROLLO WEB FREELANCE"
-              company="Generation"
-              location="CDMX"
-              duration="Ago - Oct 2022"
-              description="Maquetación y diseño de página web haciendo uso de CSS, HTML y Figma, desarrollo de interacción con la página mediante JavaScript y desarrollo de back-end al diseñar base de datos con MySQL e integración con Java."
-              technologies="CSS, HTML, Figma, JavaScript, MySQL, Java, Git, Github"
-            />
+            <h3 className="resume-title">{t("about.jobs.title")}</h3>
+            {t('about.jobs.exp', { returnObjects: true }).map((job, index) => (
+                <ResumePro
+                  key={index}
+                  title={job.title}
+                  company={job.company}
+                  location={job.location}
+                  duration={job.duration}
+                  description={job.description}
+                  technologies={job.technologies}
+                />
+              ))}
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
   --accent-color: #057876;
   --text-color: #ffffff;
   --hover-color: #29edff;
+  --dark-color:#ffffff;
 }
 
 
@@ -12,6 +13,13 @@ body {
   color: var(--text-color) !important;
   position: relative !important;
   background: transparent;
+}
+body.dark-theme{
+  --primary-color: #29221f;
+  --accent-color: #29221f;
+  --text-color: #ffffff;
+  --hover-color: #7f7f7e;
+  --dark-color:#23bbc9;
 }
 
 body::before {
@@ -52,6 +60,7 @@ h6 {
 }
 
 #bg {
+
   width: 100%;
   height: 100%;
   position: fixed;
@@ -65,6 +74,7 @@ h6 {
 }
 
 #bg.header-top {
+
   width: 100%;
   height: 100%;
   position: fixed;
@@ -217,8 +227,10 @@ h6 {
   position: fixed;
   left: 0;
   top: 0;
-  right: 0;
-  background: rgba(19, 116, 125, 0.7);
+  right: 0px;
+  padding-inline: 75px;
+  background: var(--accent-color);
+  opacity: 0.7;
 }
 
 #header.header-top .social-links,
@@ -305,6 +317,7 @@ h6 {
   transition: all 0.3s ease-in-out 0s !important;
 }
 
+
 .navbar a:hover:before,
 .navbar li:hover>a:before,
 .navbar .active:before {
@@ -370,7 +383,6 @@ h6 {
   padding: 10px 0;
   overflow-y: auto;
   transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-mobile li {
@@ -406,8 +418,9 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(19, 116, 125, 0.9);
+  background: var(--accent-color);
   padding: 30px;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -593,7 +606,7 @@ padding: 20px;
   margin-top: 4%;
   margin-right: 4%;
   padding: 10px;
-  background: rgba(10, 191, 188, 0.4);
+  background: rgba(255, 255, 255,.2);
   transition: ease-in-out 0.3s;
   border-radius: 50%;
 }
@@ -618,7 +631,8 @@ padding: 20px;
 }
 
 .icon-box:hover {
-  background: rgba(10, 191, 188, 0.9) !important;
+  background: var(--hover-color) !important;
+  opacity: 0.9;
 }
 
 .about .resume-title {
@@ -642,7 +656,7 @@ padding: 20px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
@@ -679,7 +693,7 @@ padding: 20px;
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: var(--primary-color);
+  background: var(--hover-color);
   border: 2px solid var(--primary-color);
 }
 
@@ -740,3 +754,32 @@ padding: 20px;
 
 
 
+
+#toggle-language-btn {
+  width: 20px;
+  height: 20px;
+  position: fixed; /* Permite que el botón se mantenga fijo en la ventana del navegador */
+  top: 20px; /* Distancia desde el borde superior de la ventana */
+  right: 92px; /* Distancia desde el borde derecho de la ventana */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  /*background-color: #ffffff;  Color de fondo del botón */
+  padding: 10px 10px; /* Espaciado interno del botón */
+  transition: none;
+  color: var(--text-color) !important; /* Tamaño de la fuente del icono */
+  cursor: pointer;
+}
+
+
+#toggle-theme-btn {
+  width: 20px;
+  height: 20px;
+  position: fixed; /* Permite que el botón se mantenga fijo en la ventana del navegador */
+  top: 20px; /* Distancia desde el borde superior de la ventana */
+  right: 50px; /* Distancia desde el borde derecho de la ventana */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  /*background-color: #ffffff;  Color de fondo del botón */
+  padding: 10px 10px; /* Espaciado interno del botón */
+  transition: none;
+  color: var(--dark-color) !important; /* Tamaño de la fuente del icono */
+  cursor: pointer;
+}

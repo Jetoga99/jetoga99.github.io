@@ -1,0 +1,122 @@
+{
+    "header": {
+        "home": "Inicio",
+        "about": "Acerca de Mí",
+        "portfolio": "Portafolio",
+        "desc1":"Desarrollador y ",
+        "desc2":"Analista de Datos"
+    },
+    "about":{
+        "header1":"ACERCA DE MÍ",
+        "title1": "Desarrollador & Analista de Datos",
+        "desc":"¡Hola! Soy Jesús, soy un analista de datos y desarrollador FullStack. En mis estudios universitarios desarrollé un gran interés por la programación, estadística y técnicas de machine learning.",
+        "resume":"Resumen",
+        "education": {
+            "title": "Educación",
+            "degrees": [
+                {
+                    "degree": "Ingeniería en Desarrollo de Software",
+                    "years": "2024 - 2026",
+                    "location": "Universidad Virtual del Estado de Guanajuato"
+                },
+                {
+                    "degree": "Licenciatura en Física",
+                    "years": "2018 - 2023",
+                    "location": "Universidad Nacional Autónoma de México"
+                }
+            ]
+        },
+        "certifications": {
+            "title": "Cursos y Certificaciones",
+            "certs": [
+                {
+                    "course": "Analisis de Datos de Google",
+                    "year": "2022",
+                    "location": "Coursera"
+                },
+                {
+                    "course": "NMA Deep Learning",
+                    "year": "2022",
+                    "location": "Neuromatch Academy"
+                },
+                {
+                    "course": "Scientific Computing With Python",
+                    "year": "2022",
+                    "location": "freeCodeCamp"
+                }
+            ]
+        },
+        "jobs":{
+            "title":"Experiencia Profesional",
+            "exp": [
+                {
+                    "title": "ANALISTA BI SR Marketing & Promotion",
+                    "company": "Samsung",
+                    "location": "CDMX",
+                    "duration": "Nov 2023 - Presente",
+                    "description": "Mantenimiento y actualización de dashboards en Excel, mediante el uso de fórmulas y Visual Basic. Propuestas de migración a dashboards en PowerBI que permitieran un ciclo de mantenimiento más innovador y menos susceptible al error humano. Creación de código en Python para la extracción de datos en plataformas para posterior transformación y análisis de los datos.",
+                    "technologies": "Excel, VBA, Python, PowerBI"
+                },
+                {
+                    "title": "ANALISTA DE DATOS",
+                    "company": "SOPRIS Technologies, INC.",
+                    "location": "CDMX",
+                    "duration": "Ago - Oct 2023",
+                    "description": "Mantenimiento y desarrollo de soluciones para creación de reportes a través de Plotly, Dash. Desarrollo mediante Git y extracción de datos mediante BigQuery para su posterior manipulación mediante Python. Creación y mantenimiento de dashboards mediante Looker Studio. Estudio y documentación de flujos de carga en Looker.",
+                    "technologies": "Python, Dash, Git, BigQuery, Looker Studio"
+                },
+                {
+                    "title": "SERVICIO SOCIAL",
+                    "company": "IIMAS, UNAM",
+                    "location": "CDMX",
+                    "duration": "Feb - Sep 2023",
+                    "description": "Desarrollo de mejoras en página web dedicada al análisis de tweets con enfoque principal al COVID-19, creación de formularios para la creación de usuarios, actualización de base de datos mediante operaciones CRUD con MySQL, React e integración con Django. Implementación de código para el análisis de tweets almacenados en MongoDB.",
+                    "technologies": "Python, Django, React, Postman, MySQL, MongoDB"
+                },
+                {
+                    "title": "ESPECIALISTA EN MINERÍA DE DATOS Y CRÉDITO",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "May - Jul 2023",
+                    "description": "Automatización de procesos para la asignación de créditos mediante políticas de decisión a través de la extracción de datos de productos de Buró de Crédito (Watch, Adviser). Elaboración de bases de datos para su posterior explotación y obtención de indicadores o entrega a proveedores.",
+                    "technologies": "Python, R Studio, Excel, PowerBI"
+                },
+                {
+                    "title": "ANALISTA DE RIESGOS",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "Ene - Abr 2023",
+                    "description": "Elaboración y actualización de reportes diarios para la detección temprana del deterioro de la cartera. Creación de dashboards mediante Python y PowerBI para observar datos históricos con el fin de detectar patrones para modificar políticas de riesgo. Creación de flujos de trabajo en Power Automate para el envío automático de reportes.",
+                    "technologies": "Python, R Studio, Excel, PowerBI, Power Automate"
+                },
+                {
+                    "title": "BECARIO DE RIESGOS",
+                    "company": "Fincomún",
+                    "location": "CDMX",
+                    "duration": "Oct 2022 - En 2023",
+                    "description": "Diseño de flujos de trabajo para la automatización de procesos en Excel a través de Python con el objetivo de obtención de métricas. Limpieza y transformación de datos mediante Python y R Studio. Creación de reportes para presentar a gerencia.",
+                    "technologies": "Python, R Studio, Excel"
+                },
+                {
+                    "title": "DESARROLLO WEB FREELANCE",
+                    "company": "Generation",
+                    "location": "CDMX",
+                    "duration": "Ago - Oct 2022",
+                    "description": "Maquetación y diseño de página web haciendo uso de CSS, HTML y Figma, desarrollo de interacción con la página mediante JavaScript y desarrollo de back-end al diseñar base de datos con MySQL e integración con Java.",
+                    "technologies": "CSS, HTML, Figma, JavaScript, MySQL, Java, Git, Github"
+                }
+            ]
+        }
+    },
+    "portfolio":{
+        "projects":[
+            {
+                "imageSrc": "./Miopers.png",
+                "title": "MiOpERS",
+                "text": "Mejoras en página web para análisis de tweets sobre COVID-19, incluyendo formularios de usuario y operaciones CRUD con MySQL en Django. Integración de React y MongoDB para análisis de tweets.",
+                "icons": ["faReact", "faJs","faDatabase"],
+                "refs": "http://www.miopers.unam.mx/covid/"
+            }
+        ]
+    }
+}
