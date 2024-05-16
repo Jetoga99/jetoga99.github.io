@@ -13,13 +13,10 @@ const Navbar = () => {
       const mobilenav = document.getElementById('mobilen');
       const toggleThemeBtn = document.getElementById('toggle-theme-btn');
 
-
-      console.log(mobilenav)
-      toggleThemeBtn.addEventListener('click', function() {
-        // Toggle (alternar) la clase 'dark-theme' en el body
+      if (target.id === 'toggle-theme-btn'){
         document.body.classList.toggle('dark-theme');
-      });
-      if (target.classList.contains('mobile-nav-toggle')) {
+
+      }else if(target.classList.contains('mobile-nav-toggle')) {
         navbar.classList.toggle('navbar-mobile');
 
         target.classList.toggle('bi-list');
@@ -27,7 +24,6 @@ const Navbar = () => {
       } else if (target.classList.contains('nav-link')) {
         e.preventDefault();
         const hash = target.getAttribute('href');
-        console.log(hash)
         navlinks.forEach(link => {
           link.classList.remove('active');
         });
@@ -71,8 +67,11 @@ const Navbar = () => {
 
     document.addEventListener('click', handleNavbarClick);
 
+
     return () => {
       document.removeEventListener('click', handleNavbarClick);
+
+
     };
   }, []);
 

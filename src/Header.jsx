@@ -17,6 +17,7 @@ export function Header () {
     i18n.changeLanguage(newLanguage);
     setCurrentLanguage(newLanguage); // Actualiza el estado del idioma actual
   };
+  
   return (
     
     
