@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3, faJs, faReact,faPython } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFileWord, faTerminal } from '@fortawesome/free-solid-svg-icons';
 
 const Portfolio = () => {
@@ -52,6 +52,8 @@ const Portfolio = () => {
                                     case 'faDatabase': return faDatabase;
                                     case 'faFileWord': return faFileWord;
                                     case 'faTerminal': return faTerminal;
+                                    case 'faPython': return faPython;
+
                                     default: return null;
                                 }
                             })}

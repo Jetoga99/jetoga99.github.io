@@ -116,6 +116,13 @@
                 "text": "Improvements on a website for COVID-19 tweet analysis, including user forms and CRUD operations with MySQL in Django. Integration of React and MongoDB for tweet analysis.",
                 "icons": ["faReact", "faJs", "faDatabase"],
                 "refs": "http://www.miopers.unam.mx/covid/"
+            },
+            {
+                "imageSrc": "./scraper.jpg",
+                "title": "Retail Scraper & Dashboard",
+                "text": "Creation of scrapers for the main stores in Mexico to obtain product prices and creation of a PowerBI dashboard for data visualization.",
+                "icons": [ "faPython","faDatabase"],
+                "refs": "https://app.powerbi.com/view?r=eyJrIjoiNDRlNDZkYzctZTA5Mi00YzBkLWJhNzQtOTQxYWI1MDFmZjdjIiwidCI6ImNjYTQwNjVjLWFjNzgtNDIzZi04ZTFhLTUxMGQ1ODQxNWY5MyJ9"
             }
         ]
     }
