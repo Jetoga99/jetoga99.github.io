@@ -17,10 +17,11 @@ body {
 }
 body.dark-theme{
   --primary-color: #29221f;
-  --accent-color: #29221f;
+  --accent-color: #29221f ;
+  --container-color: #29221f9b;
   --text-color: #ffffff;
   --hover-color: #7f7f7e;
-  --dark-color:#23bbc9;
+  --dark-color:#05181a;
 }
 
 body::before {
@@ -192,6 +193,12 @@ h6 {
   width: 40px;
   height: 40px;
 }
+.hidden{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
 
 #header .social-links a:hover {
   background: #fc354c;
@@ -424,7 +431,7 @@ section.section-show {
 }
 
 section .container {
-  background: var(--container-color);
+  background: var(--container-color) !important;
   padding: 30px;
 }
 

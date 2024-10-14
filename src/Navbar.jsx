@@ -67,14 +67,32 @@ const Navbar = () => {
 
     document.addEventListener('click', handleNavbarClick);
 
+    let lastScrollTop = 0;
+    const element = document.getElementById("header"); // Replace with your element's ID
+
+    const handleScroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+        // Scroll down: Hide the element
+        element.classList.add("hidden");
+      } else {
+        // Scroll up: Show the element
+        element.classList.remove("hidden");
+      }
+      
+      lastScrollTop = scrollTop;
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.removeEventListener('click', handleNavbarClick);
-
-
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  
 };
 
 export default Navbar;
