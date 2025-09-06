@@ -3,26 +3,40 @@
         "home": "Inicio",
         "about": "Acerca de Mí",
         "portfolio": "Portafolio",
-        "desc1":"Desarrollador y ",
-        "desc2":"Analista de Datos"
+        "desc1":"Ingeniero de Datos y ",
+        "desc2":"Desarrollador FullStack"
     },
     "about":{
         "header1":"ACERCA DE MÍ",
-        "title1": "Desarrollador & Analista de Datos",
-        "desc":"¡Hola! Soy Jesús, soy un analista de datos y desarrollador FullStack. En mis estudios universitarios desarrollé un gran interés por la programación, estadística y técnicas de machine learning.",
+        "title1": "Ingeniero de Datos",
+        "desc":"¡Hola! Soy Jesús, un Data Engineer Jr. con experiencia en análisis de datos y desarrollo Full-Stack. Durante los últimos dos años he trabajado en la extracción, transformación y automatización de datos, así como en el desarrollo de soluciones web y dashboards interactivos. Tengo un sólido dominio de herramientas de análisis y visualización como PowerBI, Looker Studio, R Studio, Python y MySQL, así como tecnologías de back-end (Django, NodeJS, Java) y front-end (React, JavaScript, HTML5, CSS3). También he participado en proyectos de migración de ETL a Python con Prefect, implementación de CI/CD pipelines, y web scraping para análisis competitivo. Me apasiona crear soluciones que combinen ingeniería de datos, análisis y desarrollo de software, enfocándome en la automatización, eficiencia y escalabilidad. Soy una persona orientada a resultados, en constante aprendizaje y con gran capacidad para trabajar en equipo.",
         "resume":"Resumen",
+        "personal": {
+            "age": "Edad",
+            "city": "Ciudad",
+            "cityValue": "Ciudad de México",
+            "email": "Email",
+            "emailValue": "jetoga99@gmail.com",
+            "freelance": "Freelance",
+            "freelanceValue": "Disponible"
+        },
         "education": {
             "title": "Educación",
             "degrees": [
                 {
                     "degree": "Ingeniería en Desarrollo de Software",
-                    "years": "2024 - 2026",
+                    "years": "2024 - Presente",
                     "location": "Universidad Virtual del Estado de Guanajuato"
+                },
+                {
+                    "degree": "Bootcamp de Desarrollo Full-Stack",
+                    "years": "2022",
+                    "location": "Generation | Ciudad de México"
                 },
                 {
                     "degree": "Licenciatura en Física",
                     "years": "2018 - 2023",
-                    "location": "Universidad Nacional Autónoma de México"
+                    "location": "Universidad Nacional Autónoma de México (no completada)"
                 }
             ]
         },
@@ -50,11 +64,19 @@
             "title":"Experiencia Profesional",
             "exp": [
                 {
-                    "title": "ANALISTA BI SR Marketing & Promotion",
+                    "title": "Ingeniero de Datos Jr",
+                    "company": "MOBO",
+                    "location": "Ciudad de México",
+                    "duration": "May 2025 - Presente",
+                    "description": "Participé en la migración de procesos ETL de SSIS a Python, optimizando el rendimiento y permitiendo mayor flexibilidad y mantenibilidad. Implementé flujos de trabajo de datos orquestados con Prefect, permitiendo una programación de tareas más eficiente y manejo de reintentos. Integré SQL Server Analysis Services (SSAS) para análisis y validación de datos multidimensionales dentro de pipelines de procesamiento. Contribuí a la implementación de pipelines de CI/CD para automatizar pruebas y despliegue de flujos de trabajo de datos, mejorando la colaboración del equipo y ciclos de entrega. Desarrollé scripts para extracción y transformación automatizada de datos de diversas fuentes, habilitando análisis y reportes enriquecidos.",
+                    "technologies": "Python, Prefect, SSAS, GitHub Actions, CI/CD, SQL Server, PowerBI"
+                },
+                {
+                    "title": "Ingeniero BI Marketing & Promotion",
                     "company": "Samsung",
-                    "location": "CDMX",
-                    "duration": "Nov 2023 - Presente",
-                    "description": "Mantenimiento y actualización de dashboards en Excel, mediante el uso de fórmulas y Visual Basic. Propuestas de migración a dashboards en PowerBI que permitieran un ciclo de mantenimiento más innovador y menos susceptible al error humano. Creación de código en Python para la extracción de datos en plataformas para posterior transformación y análisis de los datos.",
+                    "location": "Ciudad de México",
+                    "duration": "Nov 2023 - Abr 2025",
+                    "description": "Mantenimiento y actualización de dashboards en Excel usando fórmulas y Visual Basic. Propuestas de migración a dashboards en PowerBI para permitir un ciclo de mantenimiento más innovador y menos propenso al error humano. Creación de código en Python para extracción de datos de plataformas para posterior transformación y análisis de datos. Desarrollo de un crawler usando Python para comparar ofertas con marcas competidoras y analizar su impacto potencial en ventas.",
                     "technologies": "Excel, VBA, Python, PowerBI"
                 },
                 {
@@ -111,17 +133,17 @@
     "portfolio":{
         "projects":[
             {
-                "imageSrc": "./Miopers.png",
-                "title": "MiOpERS",
-                "text": "Mejoras en página web para análisis de tweets sobre COVID-19, incluyendo formularios de usuario y operaciones CRUD con MySQL en Django. Integración de React y MongoDB para análisis de tweets.",
+                "imageSrc": "./LogoPJ.png",
+                "title": "PrecioJusto - Plataforma de Seguimiento de Precios",
+                "text": "Desarrollo de aplicación web para comparar precios de productos en tiendas en México. Creación de API para obtener precios de productos en Django y visualización de datos en React.",
                 "icons": ["faReact", "faJs","faDatabase"],
-                "refs": "http://www.miopers.unam.mx/covid/"
+                "refs": "https://preciojustomx.mx/"
             },
             {
                 "imageSrc": "./scraper.jpg",
-                "title": "Retail Scraper & Dashboard",
-                "text": "Creación de scraper de las principales tiendas en México para obtener precios de productos y creación de dashboard en PowerBI para visualización de datos.",
-                "icons": ["faPython","faDatabase"],
+                "title": "Plataforma de Seguimiento de Precios",
+                "text": "Desarrollo de una plataforma integral de seguimiento de precios para múltiples tiendas en línea usando scrapers de Python y frontend en React. Características de monitoreo en tiempo real y análisis de datos históricos.",
+                "icons": ["faPython", "faReact", "faDatabase"],
                 "refs": "https://app.powerbi.com/view?r=eyJrIjoiNDRlNDZkYzctZTA5Mi00YzBkLWJhNzQtOTQxYWI1MDFmZjdjIiwidCI6ImNjYTQwNjVjLWFjNzgtNDIzZi04ZTFhLTUxMGQ1ODQxNWY5MyJ9"
             }
         ]

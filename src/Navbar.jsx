@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { i18n } = useTranslation('global');
 
   useEffect(() => {
     const handleNavbarClick = (e) => {
@@ -11,12 +13,16 @@ const Navbar = () => {
       const sections = document.querySelectorAll('section');
       const navlinks = document.querySelectorAll('#navbar .nav-link');
       const mobilenav = document.getElementById('mobilen');
-      const toggleThemeBtn = document.getElementById('toggle-theme-btn');
 
-      if (target.id === 'toggle-theme-btn'){
+      if (target.id === 'toggle-theme-btn' || target.closest('#toggle-theme-btn')){
         document.body.classList.toggle('dark-theme');
 
-      }else if(target.classList.contains('mobile-nav-toggle')) {
+      } else if (target.id === 'toggle-language-btn' || target.closest('#toggle-language-btn')) {
+        const currentLanguage = i18n.language;
+        const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
+        i18n.changeLanguage(newLanguage);
+
+      } else if(target.classList.contains('mobile-nav-toggle')) {
         navbar.classList.toggle('navbar-mobile');
 
         target.classList.toggle('bi-list');
@@ -90,9 +96,9 @@ const Navbar = () => {
       document.removeEventListener('click', handleNavbarClick);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [i18n]);
 
-  
+  return null;
 };
 
 export default Navbar;

@@ -8,7 +8,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 
 export function About() {
-  const { t, i18n } = useTranslation('global');
+  const { t } = useTranslation('global');
+
+  const calculateAge = () => {
+    const birthDate = new Date(1999, 7, 1); // August 1, 1999 (month is 0-indexed)
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
 
   const IconBox = ({ icon, color }) => (
     <div className="icon-box">
@@ -52,7 +65,7 @@ export function About() {
         </div>
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <img src="https://unavatar.io/Jetoga99" className="img-fluid" alt="" />
+            <img src="https://unavatar.io/github/Jetoga99" className="img-fluid" alt="" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
             <h3>{t("about.title1")}</h3>
@@ -61,20 +74,20 @@ export function About() {
               <div className="col-lg-6">
                 <ul>
                   <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>24</span>
+                    <i className="bi bi-chevron-right"></i> <strong>{t("about.personal.age")}:</strong> <span>{calculateAge()}</span>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Ciudad de México</span>
+                    <i className="bi bi-chevron-right"></i> <strong>{t("about.personal.city")}:</strong> <span>{t("about.personal.cityValue")}</span>
                   </li>
                 </ul>
               </div>
               <div className="col-lg-6">
                 <ul>
                   <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jetoga99@gmail.com</span>
+                    <i className="bi bi-chevron-right"></i> <strong>{t("about.personal.email")}:</strong> <span>{t("about.personal.emailValue")}</span>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Disponible</span>
+                    <i className="bi bi-chevron-right"></i> <strong>{t("about.personal.freelance")}:</strong> <span>{t("about.personal.freelanceValue")}</span>
                   </li>
                 </ul>
               </div>
@@ -108,7 +121,22 @@ export function About() {
           <h2>{t("about.resume")}</h2>
         </div>
         <div className="row">
+
           <div className="col-lg-6">
+            <h3 className="resume-title">{t("about.jobs.title")}</h3>
+            {t('about.jobs.exp', { returnObjects: true }).map((job, index) => (
+                <ResumePro
+                  key={index}
+                  title={job.title}
+                  company={job.company}
+                  location={job.location}
+                  duration={job.duration}
+                  description={job.description}
+                  technologies={job.technologies}
+                />
+              ))}
+          </div>
+                    <div className="col-lg-6">
             <h3 className="resume-title">{t("about.education.title")}</h3>
             {t('about.education.degrees', { returnObjects: true }).map((degree, index) => (
                     <ResumeEdu
@@ -128,20 +156,6 @@ export function About() {
                     />
                   ))} 
          </div>
-          <div className="col-lg-6">
-            <h3 className="resume-title">{t("about.jobs.title")}</h3>
-            {t('about.jobs.exp', { returnObjects: true }).map((job, index) => (
-                <ResumePro
-                  key={index}
-                  title={job.title}
-                  company={job.company}
-                  location={job.location}
-                  duration={job.duration}
-                  description={job.description}
-                  technologies={job.technologies}
-                />
-              ))}
-          </div>
         </div>
       </div>
     </section>

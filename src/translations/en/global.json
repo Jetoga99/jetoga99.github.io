@@ -3,14 +3,23 @@
         "home": "Home",
         "about": "About Me",
         "portfolio": "Portfolio",
-        "desc1": "Developer and ",
-        "desc2": "Data Analyst"
+        "desc1": "Data Engineer and ",
+        "desc2": "FullStack Developer"
     },
     "about": {
         "header1": "ABOUT ME",
-        "title1": "Developer & Data Analyst",
-        "desc": "Hello! I'm Jesús, I'm a data analyst and FullStack developer. During my university studies, I developed a keen interest in programming, statistics, and machine learning techniques.",
+        "title1": "Data Engineer",
+        "desc": "Hi! I'm Jesús, a Junior Data Engineer with experience in data analysis and Full-Stack development. Over the past two years, I've worked on data extraction, transformation, and automation, as well as building interactive dashboards and web solutions. I have strong expertise in analytics and visualization tools such as PowerBI, Looker Studio, R Studio, Python, and MySQL, along with back-end technologies (Django, NodeJS, Java) and front-end technologies (React, JavaScript, HTML5, CSS3). I've also been involved in migrating ETL processes to Python with Prefect, implementing CI/CD pipelines, and developing web scrapers for competitive analysis. I'm passionate about creating solutions that combine data engineering, analytics, and software development, with a strong focus on automation, efficiency, and scalability. I am results-driven, always learning, and highly collaborative.",
         "resume": "Resume",
+        "personal": {
+            "age": "Age",
+            "city": "City",
+            "cityValue": "Mexico City",
+            "email": "Email",
+            "emailValue": "jetoga99@gmail.com",
+            "freelance": "Freelance",
+            "freelanceValue": "Available"
+        },
         "education": {
             "title": "Education",
             "degrees": [
@@ -50,11 +59,19 @@
             "title": "Professional Experience",
             "exp": [
                 {
-                    "title": "SR BI Analyst Marketing & Promotion",
+                    "title": "Data Engineer Jr",
+                    "company": "MOBO",
+                    "location": "Mexico City",
+                    "duration": "May 2025 - Present",
+                    "description": "Participated in the migration of ETL processes from SSIS to Python, optimizing performance and enabling greater flexibility and maintainability. Implemented data workflows orchestrated with Prefect, allowing for more efficient task scheduling and retry handling. Integrated SQL Server Analysis Services (SSAS) for multidimensional data analysis and validation within processing pipelines. Contributed to the implementation of CI/CD pipelines to automate testing and deployment of data workflows, improving team collaboration and delivery cycles. Developed scripts for automated data extraction and transformation from various sources, enabling enriched analytics and reporting.",
+                    "technologies": "Python, Prefect, SSAS, GitHub Actions, CI/CD, SQL Server, PowerBI"
+                },
+                {
+                    "title": "BI Engineer Marketing & Promotion",
                     "company": "Samsung",
-                    "location": "CDMX",
-                    "duration": "Nov 2023 - Present",
-                    "description": "Maintenance and updating of dashboards in Excel, using formulas and Visual Basic. Proposals for migrating to PowerBI dashboards to enable a more innovative maintenance cycle and less susceptible to human error. Python code creation for data extraction on platforms for subsequent data transformation and analysis.",
+                    "location": "Mexico City",
+                    "duration": "Nov 2023 - Apr 2025",
+                    "description": "Maintenance and updating of dashboards in Excel using formulas and Visual Basic. Proposals for migration to PowerBI dashboards to allow for a more innovative maintenance cycle and less prone to human error. Creation of code in Python for data extraction from platforms for subsequent transformation and analysis of data. Development of a crawler using Python to compare offers with competitor brands and analyze their potential impact on sales.",
                     "technologies": "Excel, VBA, Python, PowerBI"
                 },
                 {
@@ -111,17 +128,17 @@
     "portfolio": {
         "projects": [
             {
-                "imageSrc": "./Miopers.png",
-                "title": "MiOpERS",
-                "text": "Improvements on a website for COVID-19 tweet analysis, including user forms and CRUD operations with MySQL in Django. Integration of React and MongoDB for tweet analysis.",
+                "imageSrc": "./LogoPJ.png",
+                "title": "PrecioJusto - Price Tracking Platform",
+                "text": "Development of web application to compare product prices in stores across Mexico. Creation of API to obtain product prices in Django and data visualization in React.",
                 "icons": ["faReact", "faJs", "faDatabase"],
-                "refs": "http://www.miopers.unam.mx/covid/"
+                "refs": "https://preciojustomx.mx/"
             },
             {
                 "imageSrc": "./scraper.jpg",
-                "title": "Retail Scraper & Dashboard",
-                "text": "Creation of scrapers for the main stores in Mexico to obtain product prices and creation of a PowerBI dashboard for data visualization.",
-                "icons": [ "faPython","faDatabase"],
+                "title": "Price Tracking Platform",
+                "text": "Development of a comprehensive price tracking platform for multiple online stores using Python scrapers and React frontend. Features real-time price monitoring and historical data analysis.",
+                "icons": ["faPython", "faReact", "faDatabase"],
                 "refs": "https://app.powerbi.com/view?r=eyJrIjoiNDRlNDZkYzctZTA5Mi00YzBkLWJhNzQtOTQxYWI1MDFmZjdjIiwidCI6ImNjYTQwNjVjLWFjNzgtNDIzZi04ZTFhLTUxMGQ1ODQxNWY5MyJ9"
             }
         ]
