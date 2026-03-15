@@ -1,31 +1,34 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3, faJs, faReact,faPython } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3, faJs, faReact, faPython } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFileWord, faTerminal } from '@fortawesome/free-solid-svg-icons';
 
-const Portfolio = () => {
-    const { t ,i18n} = useTranslation('global');
+const ICON_MAP = {
+    faHtml5, faCss3, faJs, faReact, faDatabase, faFileWord, faTerminal, faPython,
+};
 
-    const Card = ({ imageSrc, title, text, icons, refs }) => {
-        return (
-            <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div className="card text-white">
-                    <img src={imageSrc} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">{title}</h5>
-                        <p className="card-text">{text}</p>
-                        <div className="card-icons">
-                            {icons.map((icon, index) => (
-                                <a key={index}><FontAwesomeIcon icon={icon} /></a>
-                            ))}
-                        </div>
-                        <a href={refs} target="_blank" className="stretched-link" rel="noopener noreferrer"></a>
-                    </div>
+const Card = ({ imageSrc, title, text, icons, refs }) => (
+    <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <div className="card text-white">
+            <img src={imageSrc} className="card-img-top" alt={title} />
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{text}</p>
+                <div className="card-icons">
+                    {icons.map((icon, index) => icon && (
+                        <span key={index} aria-hidden="true">
+                            <FontAwesomeIcon icon={icon} />
+                        </span>
+                    ))}
                 </div>
+                <a href={refs} target="_blank" className="stretched-link" rel="noopener noreferrer" aria-label={`View project: ${title}`}></a>
             </div>
-        );
-    };
+        </div>
+    </div>
+);
+
+const Portfolio = () => {
+    const { t } = useTranslation('global');
 
     const projects = t('portfolio.projects', { returnObjects: true });
 
@@ -41,22 +44,9 @@ const Portfolio = () => {
                         <Card
                             key={index}
                             imageSrc={project.imageSrc}
-                            title={t(project.title)}
-                            text={t(project.text)}
-                            icons={project.icons.map(icon => {
-                                switch(icon) {
-                                    case 'faHtml5': return faHtml5;
-                                    case 'faCss3': return faCss3;
-                                    case 'faJs': return faJs;
-                                    case 'faReact': return faReact;
-                                    case 'faDatabase': return faDatabase;
-                                    case 'faFileWord': return faFileWord;
-                                    case 'faTerminal': return faTerminal;
-                                    case 'faPython': return faPython;
-
-                                    default: return null;
-                                }
-                            })}
+                            title={project.title}
+                            text={project.text}
+                            icons={project.icons.map(icon => ICON_MAP[icon] ?? null)}
                             refs={project.refs}
                         />
                     ))}

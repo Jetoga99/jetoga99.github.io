@@ -3,9 +3,42 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPython, faGitAlt, faGithub, faJsSquare, faJava, faCss3Alt, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFileWord, faTerminal } from '@fortawesome/free-solid-svg-icons';
-import './styles.css'; // Asegúrate de tener los estilos CSS asociados
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
+
+const IconBox = ({ icon, color, label }) => (
+  <div className="icon-box">
+    <FontAwesomeIcon icon={icon} style={{ color }} />
+    <h3>{label}</h3>
+  </div>
+);
+
+function ResumeEdu(props) {
+  return (
+    <div className="resume-item">
+      <h4>{props.title}</h4>
+      <h5>{props.duration}</h5>
+      <p>
+        <em>{props.university}</em>
+      </p>
+    </div>
+  );
+}
+
+function ResumePro(props) {
+  return (
+    <div className="resume-item">
+      <h4>{props.title}</h4>
+      <h5>
+        {props.company} | {props.location} | {props.duration}
+      </h5>
+      <p>{props.description}</p>
+      <p>
+        <strong>{props.technologies}</strong>
+      </p>
+    </div>
+  );
+}
 
 export function About() {
   const { t } = useTranslation('global');
@@ -15,47 +48,13 @@ export function About() {
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
-    
+
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
-    
+
     return age;
   };
-
-  const IconBox = ({ icon, color }) => (
-    <div className="icon-box">
-      <FontAwesomeIcon icon={icon} style={{ color }} />
-    </div>
-  );
-
-  function ResumeEdu(props) {
-    return (
-      <div className="resume-item">
-        <h4>{t(props.title)}</h4>
-        <h5>{props.duration}</h5>
-        <p>
-          <em>{t(props.university)}</em>
-        </p>
-      </div>
-    );
-  }
-
-  function ResumePro(props) {
-    return (
-      <div className="resume-item">
-        <h4>{t(props.title)}</h4>
-        <h5>
-          {t(props.company)} | {t(props.location)} | {props.duration}
-        </h5>
-        <p>{t(props.description)}</p>
-        <p>
-          <strong> {t(props.technologies)}</strong>
-        </p>
-      </div>
-    );
-  }
-
 
   return (
     <section id="about" className="about">
@@ -65,7 +64,7 @@ export function About() {
         </div>
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <img src="https://unavatar.io/github/Jetoga99" className="img-fluid" alt="" />
+            <img src="https://avatars.githubusercontent.com/u/71528087?v=4" className="img-fluid" alt="Jesús Torres García" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
             <h3>{t("about.title1")}</h3>
@@ -94,23 +93,23 @@ export function About() {
             </div>
             <div className="interests">
               <div className="section-title">
-                <h2>Skills</h2>
+                <h2>{t("about.skills")}</h2>
               </div>
               <div className="box">
                 <div className="icon-box">
                   <img src="https://raw.githubusercontent.com/kiewic/icons/master/svg/PowerBiLogo100x100.svg" alt="Power BI" />
                   <h3>Power BI</h3>
                 </div>
-                <IconBox icon={faPython} color="#ffcc25" />
-                <IconBox icon={faDatabase} color="#5578ff" />
-                <IconBox icon={faGitAlt} color="#f84600" />
-                <IconBox icon={faGithub} color="#ffffff" />
-                <IconBox icon={faJsSquare} color="#fbff00" />
-                <IconBox icon={faJava} color="#f18724" />
-                <IconBox icon={faTerminal} color="#fdfdfd" />
-                <IconBox icon={faCss3Alt} color="#264de4" />
-                <IconBox icon={faHtml5} color="#ff2600" />
-                <IconBox icon={faFileWord} color="#0051ff" />
+                <IconBox icon={faPython} color="#ffcc25" label="Python" />
+                <IconBox icon={faDatabase} color="#5578ff" label="SQL" />
+                <IconBox icon={faGitAlt} color="#f84600" label="Git" />
+                <IconBox icon={faGithub} color="#ffffff" label="GitHub" />
+                <IconBox icon={faJsSquare} color="#fbff00" label="JavaScript" />
+                <IconBox icon={faJava} color="#f18724" label="Java" />
+                <IconBox icon={faTerminal} color="#fdfdfd" label="Bash" />
+                <IconBox icon={faCss3Alt} color="#264de4" label="CSS3" />
+                <IconBox icon={faHtml5} color="#ff2600" label="HTML5" />
+                <IconBox icon={faFileWord} color="#0051ff" label="Office" />
               </div>
             </div>
           </div>
@@ -136,7 +135,7 @@ export function About() {
                 />
               ))}
           </div>
-                    <div className="col-lg-6">
+          <div className="col-lg-6">
             <h3 className="resume-title">{t("about.education.title")}</h3>
             {t('about.education.degrees', { returnObjects: true }).map((degree, index) => (
                     <ResumeEdu
@@ -154,7 +153,7 @@ export function About() {
                       duration={cert.year}
                       university={cert.location}
                     />
-                  ))} 
+                  ))}
          </div>
         </div>
       </div>

@@ -1,25 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Intro } from './Intro.jsx';
 import {Header} from './Header.jsx';
-import {Background} from './Background.jsx'; // Importa el componente de fondo
+import {Background} from './Background.jsx';
 import {About} from './About.jsx';
 import Navbar from './Navbar';
 import Portfolio from './Portfolio.jsx';
-import './styles.css'; // Asegúrate de tener los estilos CSS asociados
- 
+
 export function App () {
+  const [introComplete, setIntroComplete] = useState(false);
+
   return (
-    <Router>
+    <>
+      {!introComplete && <Intro onComplete={() => setIntroComplete(true)} />}
       <Navbar/>
-
       <Background/>
-
       <Header/>
-
       <About />
-      
       <Portfolio />
-
-    </Router>
+    </>
   );
 };

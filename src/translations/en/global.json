@@ -10,6 +10,8 @@
         "header1": "ABOUT ME",
         "title1": "Data Engineer",
         "desc": "Hi! I'm Jesús, a Junior Data Engineer with experience in data analysis and Full-Stack development. Over the past two years, I've worked on data extraction, transformation, and automation, as well as building interactive dashboards and web solutions. I have strong expertise in analytics and visualization tools such as PowerBI, Looker Studio, R Studio, Python, and MySQL, along with back-end technologies (Django, NodeJS, Java) and front-end technologies (React, JavaScript, HTML5, CSS3). I've also been involved in migrating ETL processes to Python with Prefect, implementing CI/CD pipelines, and developing web scrapers for competitive analysis. I'm passionate about creating solutions that combine data engineering, analytics, and software development, with a strong focus on automation, efficiency, and scalability. I am results-driven, always learning, and highly collaborative.",
+        "skills": "Skills",
+        "cta": "View my projects",
         "resume": "Resume",
         "personal": {
             "age": "Age",
@@ -25,8 +27,13 @@
             "degrees": [
                 {
                     "degree": "Software Development Engineering",
-                    "years": "2024 - 2026",
+                    "years": "2024 - Present",
                     "location": "Virtual University of the State of Guanajuato"
+                },
+                {
+                    "degree": "Full-Stack Development Bootcamp",
+                    "years": "2022",
+                    "location": "Generation | Mexico City"
                 },
                 {
                     "degree": "Bachelor of Physics",

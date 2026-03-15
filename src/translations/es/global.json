@@ -10,6 +10,8 @@
         "header1":"ACERCA DE MÍ",
         "title1": "Ingeniero de Datos",
         "desc":"¡Hola! Soy Jesús, un Data Engineer Jr. con experiencia en análisis de datos y desarrollo Full-Stack. Durante los últimos dos años he trabajado en la extracción, transformación y automatización de datos, así como en el desarrollo de soluciones web y dashboards interactivos. Tengo un sólido dominio de herramientas de análisis y visualización como PowerBI, Looker Studio, R Studio, Python y MySQL, así como tecnologías de back-end (Django, NodeJS, Java) y front-end (React, JavaScript, HTML5, CSS3). También he participado en proyectos de migración de ETL a Python con Prefect, implementación de CI/CD pipelines, y web scraping para análisis competitivo. Me apasiona crear soluciones que combinen ingeniería de datos, análisis y desarrollo de software, enfocándome en la automatización, eficiencia y escalabilidad. Soy una persona orientada a resultados, en constante aprendizaje y con gran capacidad para trabajar en equipo.",
+        "skills": "Habilidades",
+        "cta": "Ver mis proyectos",
         "resume":"Resumen",
         "personal": {
             "age": "Edad",

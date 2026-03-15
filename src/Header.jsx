@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faEnvelope ,faFile, faCircleHalfStroke, faLanguage} from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import './styles.css';
 import { useTranslation } from 'react-i18next';
 
 
@@ -14,38 +13,53 @@ export function Header () {
     
     <header id="header" className='header'>
       <div className="container">
-        <h1><a>Jesús Torres García</a></h1>
+        <h1><a href="#header">Jesús Torres García</a></h1>
         <h2>{t("header.desc1")}<span>{t("header.desc2")}</span> </h2>
         
 
         <nav id="navbar" className="navbar">
         <ul>
             <li><a className="nav-link active" href="#header">{t("header.home")}</a></li>
-            <li><a className="nav-link" href="/about">{t("header.about")}</a></li>
-            <li><a className="nav-link" href="/portfolio">{t("header.portfolio")}</a></li>
-            <li><FontAwesomeIcon id='toggle-language-btn' icon={faLanguage} 
-                title={i18n.language === 'en' ? 'Switch to Spanish' : 'Switch to English'}/></li>
-
-            <li><FontAwesomeIcon id='toggle-theme-btn' icon={faCircleHalfStroke} /></li>
+            <li><a className="nav-link" href="#about">{t("header.about")}</a></li>
+            <li><a className="nav-link" href="#portfolio">{t("header.portfolio")}</a></li>
+            <li>
+              <FontAwesomeIcon
+                id='toggle-language-btn'
+                icon={faLanguage}
+                title={i18n.language === 'en' ? 'Switch to Spanish' : 'Switch to English'}
+                aria-label={i18n.language === 'en' ? 'Switch to Spanish' : 'Switch to English'}
+                role="button"
+                tabIndex={0}
+              />
+            </li>
+            <li>
+              <FontAwesomeIcon
+                id='toggle-theme-btn'
+                icon={faCircleHalfStroke}
+                aria-label="Toggle dark/light theme"
+                role="button"
+                tabIndex={0}
+              />
+            </li>
 
           </ul>
           <i id="mobilen" className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
         <div className="social-links">
-          <a href="https://twitter.com/jetoga9" target="_self">
+          <a href="https://twitter.com/jetoga9" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="https://www.linkedin.com/in/jtorresgarcia/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/jtorresgarcia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="mailto:jetoga99@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jetoga99@gmail.com" aria-label="Email">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
-          <a href="https://github.com/jetoga99" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jetoga99" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="/Jesus_Torres_G_CurriculumVitae.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/Jesus_Torres_G_CurriculumVitae.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume PDF">
             <FontAwesomeIcon icon={faFile} />
           </a>
 

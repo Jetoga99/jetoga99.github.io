@@ -76,7 +76,6 @@ h6 {
 }
 
 #bg.header-top {
-
   width: 100%;
   height: 100%;
   position: fixed;
@@ -86,6 +85,8 @@ h6 {
   align-items: center;
   justify-content: center;
   z-index: -1;
+  opacity: 0.25;
+  transition: opacity 0.4s ease-in-out;
 }
 
 #header {
@@ -116,8 +117,8 @@ h6 {
   color: #fff !important;
   line-height: 1;
   display: inline-block;
+  text-decoration: none !important;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-
 }
 
 #header h2 {
@@ -182,7 +183,8 @@ h6 {
   justify-content: center;
 }
 
-.card-icons a {
+.card-icons a,
+.card-icons span {
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -584,7 +586,7 @@ svg .ring:nth-child(2) ellipse {
   animation-direction: reverse;
 }
 
-svg .ring:nth-child(3) ellipse.ring:nth-child(3) {
+svg .ring:nth-child(3) ellipse {
   animation-delay: -1s;
 }
 
@@ -619,7 +621,7 @@ padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px ;
+  width: 50px;
   height: 50px;
   margin-top: 4%;
   margin-right: 4%;
@@ -630,22 +632,17 @@ padding: 20px;
 }
 
 .icon-box svg {
-  font-size: 30px ;
+  font-size: 30px;
   padding-right: 0px;
   padding: 20px;
 }
+
 .icon-box img {
   width: 40px;
-
 }
 
 .icon-box h3 {
-  font-weight: bold;
-  margin: 0;
   display: none;
-  font-size: 10px;
-  color: #fff;
-  text-align: center; /* Ajusta el texto al centro */
 }
 
 .icon-box:hover {
@@ -672,7 +669,6 @@ padding: 20px;
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
-  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   margin-bottom: 10px;
@@ -719,6 +715,7 @@ padding: 20px;
   text-align: left;
   background: rgba(204, 204, 204, 0.1);
   transition: all ease-in-out 0.3s;
+  cursor: pointer;
 }
 
 .services .icon-box h4 {
@@ -736,6 +733,8 @@ padding: 20px;
 .services .card:hover {
   background: var(--accent-color);
   border-color: var(--accent-color);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .services .card-img-top {
@@ -800,4 +799,145 @@ padding: 20px;
   transition: none;
   color: var(--dark-color) !important; /* Tamaño de la fuente del icono */
   cursor: pointer;
+}
+
+/* CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.cta-btn,
+.hero-cta .nav-link.cta-btn {
+  display: inline-block !important;
+  padding: 10px 24px !important;
+  border-radius: 25px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: "Poppins", sans-serif !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none !important;
+  background: #fc354c !important;
+  color: #fff !important;
+  border: 2px solid #fc354c !important;
+}
+
+.cta-btn:hover,
+.hero-cta .nav-link.cta-btn:hover {
+  background: transparent !important;
+  color: #fc354c !important;
+}
+
+.hero-cta .nav-link.cta-btn::before {
+  display: none !important;
+}
+
+.cta-btn--outline {
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+}
+
+.cta-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+@media (max-width: 992px) {
+  .hero-cta {
+    justify-content: center;
+  }
+}
+
+/* ===== Intro Animation ===== */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #057876;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.75s ease;
+}
+
+.intro-overlay.intro-sliding {
+  background: transparent;
+  pointer-events: none;
+}
+
+/* El SVG del átomo se desliza levemente a la derecha y desaparece */
+.intro-svg-wrapper {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.7s ease;
+}
+
+.intro-sliding .intro-svg-wrapper {
+  transform: translateX(18vw);
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .intro-sliding .intro-svg-wrapper {
+    transform: none;
+  }
+}
+
+/* Ocultar el átomo de fondo durante el intro */
+body.intro-active #bg {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+/* El átomo de fondo aparece cuando el intro termina */
+body.intro-revealing #bg {
+  animation: bg-atom-in 0.8s ease 0.3s both;
+}
+
+@keyframes bg-atom-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Ocultar header durante el intro — sin transform en .navbar para no romper los iconos position:fixed */
+body.intro-active #header h1,
+body.intro-active #header h2,
+body.intro-active #header .social-links {
+  opacity: 0 !important;
+  transform: translateX(-25px) !important;
+  transition: none !important;
+}
+
+body.intro-active #header .navbar {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+/* Header se revela con slide-in desde la izquierda */
+body.intro-revealing #header h1 {
+  animation: header-slide-in 0.5s ease both;
+}
+body.intro-revealing #header h2 {
+  animation: header-slide-in 0.5s ease 0.08s both;
+}
+body.intro-revealing #header .navbar {
+  animation: navbar-fade-in 0.5s ease 0.16s both;
+}
+body.intro-revealing #header .social-links {
+  animation: header-slide-in 0.5s ease 0.28s both;
+}
+
+@keyframes header-slide-in {
+  from { opacity: 0; transform: translateX(-25px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes navbar-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
