@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import { Intro } from './Intro.jsx';
-import {Header} from './Header.jsx';
-import {Background} from './Background.jsx';
-import {About} from './About.jsx';
-import Navbar from './Navbar';
-import Portfolio from './Portfolio.jsx';
+import { Topbar } from './Topbar.jsx';
+import { Hero } from './Hero.jsx';
+import { Stack } from './Stack.jsx';
+import { Experience } from './Experience.jsx';
+import { Education } from './Education.jsx';
+import { Projects } from './Projects.jsx';
+import { Contact, Footer } from './Contact.jsx';
 
-export function App () {
-  const [introComplete, setIntroComplete] = useState(false);
-
+export function App() {
   return (
     <>
-      {!introComplete && <Intro onComplete={() => setIntroComplete(true)} />}
-      <Navbar/>
-      <Background/>
-      <Header/>
-      <About />
-      <Portfolio />
+      <Topbar />
+      <main id="inicio">
+        <Hero />
+        <Stack />
+        <Experience />
+        <Education />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
     </>
   );
-};
+}

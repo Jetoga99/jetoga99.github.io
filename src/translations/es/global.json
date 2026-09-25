@@ -1,153 +1,338 @@
 {
-    "header": {
-        "home": "Inicio",
-        "about": "Acerca de Mí",
-        "portfolio": "Portafolio",
-        "desc1":"Ingeniero de Datos y ",
-        "desc2":"Desarrollador FullStack"
+    "nav": {
+        "sections": "Secciones",
+        "stack": "Stack",
+        "experience": "Trayectoria",
+        "education": "Formación",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "language": "Idioma",
+        "theme": "Cambiar tema claro/oscuro"
     },
-    "about":{
-        "header1":"ACERCA DE MÍ",
-        "title1": "Ingeniero de Datos",
-        "desc":"¡Hola! Soy Jesús, un Data Engineer Jr. con experiencia en análisis de datos y desarrollo Full-Stack. Durante los últimos dos años he trabajado en la extracción, transformación y automatización de datos, así como en el desarrollo de soluciones web y dashboards interactivos. Tengo un sólido dominio de herramientas de análisis y visualización como PowerBI, Looker Studio, R Studio, Python y MySQL, así como tecnologías de back-end (Django, NodeJS, Java) y front-end (React, JavaScript, HTML5, CSS3). También he participado en proyectos de migración de ETL a Python con Prefect, implementación de CI/CD pipelines, y web scraping para análisis competitivo. Me apasiona crear soluciones que combinen ingeniería de datos, análisis y desarrollo de software, enfocándome en la automatización, eficiencia y escalabilidad. Soy una persona orientada a resultados, en constante aprendizaje y con gran capacidad para trabajar en equipo.",
-        "skills": "Habilidades",
-        "cta": "Ver mis proyectos",
-        "resume":"Resumen",
-        "personal": {
-            "age": "Edad",
-            "city": "Ciudad",
-            "cityValue": "Ciudad de México",
-            "email": "Email",
-            "emailValue": "jetoga99@gmail.com",
-            "freelance": "Freelance",
-            "freelanceValue": "Disponible"
-        },
-        "education": {
-            "title": "Educación",
-            "degrees": [
-                {
-                    "degree": "Ingeniería en Desarrollo de Software",
-                    "years": "2024 - Presente",
-                    "location": "Universidad Virtual del Estado de Guanajuato"
-                },
-                {
-                    "degree": "Bootcamp de Desarrollo Full-Stack",
-                    "years": "2022",
-                    "location": "Generation | Ciudad de México"
-                },
-                {
-                    "degree": "Licenciatura en Física",
-                    "years": "2018 - 2023",
-                    "location": "Universidad Nacional Autónoma de México (no completada)"
-                }
-            ]
-        },
-        "certifications": {
-            "title": "Cursos y Certificaciones",
-            "certs": [
-                {
-                    "course": "Analisis de Datos de Google",
-                    "year": "2022",
-                    "location": "Coursera"
-                },
-                {
-                    "course": "NMA Deep Learning",
-                    "year": "2022",
-                    "location": "Neuromatch Academy"
-                },
-                {
-                    "course": "Scientific Computing With Python",
-                    "year": "2022",
-                    "location": "freeCodeCamp"
-                }
-            ]
-        },
-        "jobs":{
-            "title":"Experiencia Profesional",
-            "exp": [
-                {
-                    "title": "Ingeniero de Datos Jr",
-                    "company": "MOBO",
-                    "location": "Ciudad de México",
-                    "duration": "May 2025 - Presente",
-                    "description": "Participé en la migración de procesos ETL de SSIS a Python, optimizando el rendimiento y permitiendo mayor flexibilidad y mantenibilidad. Implementé flujos de trabajo de datos orquestados con Prefect, permitiendo una programación de tareas más eficiente y manejo de reintentos. Integré SQL Server Analysis Services (SSAS) para análisis y validación de datos multidimensionales dentro de pipelines de procesamiento. Contribuí a la implementación de pipelines de CI/CD para automatizar pruebas y despliegue de flujos de trabajo de datos, mejorando la colaboración del equipo y ciclos de entrega. Desarrollé scripts para extracción y transformación automatizada de datos de diversas fuentes, habilitando análisis y reportes enriquecidos.",
-                    "technologies": "Python, Prefect, SSAS, GitHub Actions, CI/CD, SQL Server, PowerBI"
-                },
-                {
-                    "title": "Ingeniero BI Marketing & Promotion",
-                    "company": "Samsung",
-                    "location": "Ciudad de México",
-                    "duration": "Nov 2023 - Abr 2025",
-                    "description": "Mantenimiento y actualización de dashboards en Excel usando fórmulas y Visual Basic. Propuestas de migración a dashboards en PowerBI para permitir un ciclo de mantenimiento más innovador y menos propenso al error humano. Creación de código en Python para extracción de datos de plataformas para posterior transformación y análisis de datos. Desarrollo de un crawler usando Python para comparar ofertas con marcas competidoras y analizar su impacto potencial en ventas.",
-                    "technologies": "Excel, VBA, Python, PowerBI"
-                },
-                {
-                    "title": "ANALISTA DE DATOS",
-                    "company": "SOPRIS Technologies, INC.",
-                    "location": "CDMX",
-                    "duration": "Ago - Oct 2023",
-                    "description": "Mantenimiento y desarrollo de soluciones para creación de reportes a través de Plotly, Dash. Desarrollo mediante Git y extracción de datos mediante BigQuery para su posterior manipulación mediante Python. Creación y mantenimiento de dashboards mediante Looker Studio. Estudio y documentación de flujos de carga en Looker.",
-                    "technologies": "Python, Dash, Git, BigQuery, Looker Studio"
-                },
-                {
-                    "title": "SERVICIO SOCIAL",
-                    "company": "IIMAS, UNAM",
-                    "location": "CDMX",
-                    "duration": "Feb - Sep 2023",
-                    "description": "Desarrollo de mejoras en página web dedicada al análisis de tweets con enfoque principal al COVID-19, creación de formularios para la creación de usuarios, actualización de base de datos mediante operaciones CRUD con MySQL, React e integración con Django. Implementación de código para el análisis de tweets almacenados en MongoDB.",
-                    "technologies": "Python, Django, React, Postman, MySQL, MongoDB"
-                },
-                {
-                    "title": "ESPECIALISTA EN MINERÍA DE DATOS Y CRÉDITO",
-                    "company": "Fincomún",
-                    "location": "CDMX",
-                    "duration": "May - Jul 2023",
-                    "description": "Automatización de procesos para la asignación de créditos mediante políticas de decisión a través de la extracción de datos de productos de Buró de Crédito (Watch, Adviser). Elaboración de bases de datos para su posterior explotación y obtención de indicadores o entrega a proveedores.",
-                    "technologies": "Python, R Studio, Excel, PowerBI"
-                },
-                {
-                    "title": "ANALISTA DE RIESGOS",
-                    "company": "Fincomún",
-                    "location": "CDMX",
-                    "duration": "Ene - Abr 2023",
-                    "description": "Elaboración y actualización de reportes diarios para la detección temprana del deterioro de la cartera. Creación de dashboards mediante Python y PowerBI para observar datos históricos con el fin de detectar patrones para modificar políticas de riesgo. Creación de flujos de trabajo en Power Automate para el envío automático de reportes.",
-                    "technologies": "Python, R Studio, Excel, PowerBI, Power Automate"
-                },
-                {
-                    "title": "BECARIO DE RIESGOS",
-                    "company": "Fincomún",
-                    "location": "CDMX",
-                    "duration": "Oct 2022 - En 2023",
-                    "description": "Diseño de flujos de trabajo para la automatización de procesos en Excel a través de Python con el objetivo de obtención de métricas. Limpieza y transformación de datos mediante Python y R Studio. Creación de reportes para presentar a gerencia.",
-                    "technologies": "Python, R Studio, Excel"
-                },
-                {
-                    "title": "DESARROLLO WEB FREELANCE",
-                    "company": "Generation",
-                    "location": "CDMX",
-                    "duration": "Ago - Oct 2022",
-                    "description": "Maquetación y diseño de página web haciendo uso de CSS, HTML y Figma, desarrollo de interacción con la página mediante JavaScript y desarrollo de back-end al diseñar base de datos con MySQL e integración con Java.",
-                    "technologies": "CSS, HTML, Figma, JavaScript, MySQL, Java, Git, Github"
-                }
-            ]
-        }
+    "hero": {
+        "state": "Estado actual: Ingeniero de Datos en Takeda",
+        "tileRole": "[Data Eng.]",
+        "lede1": "Físico de formación, ingeniero de datos de oficio. Construyo ",
+        "ledeStrong": "pipelines de datos a escala",
+        "lede2": " con Scala, Spark, Iceberg y Airflow para Investigación y Desarrollo.",
+        "ctaPrimary": "Ver trayectoria",
+        "ctaSecondary": "Escríbeme",
+        "location": "Ciudad de México",
+        "constants": [
+            "de jetoga99, y número atómico del einstenio",
+            "primer rol trabajando con datos",
+            "roles en 7 organizaciones",
+            "Licenciatura en Física, 2018–2023"
+        ]
     },
-    "portfolio":{
-        "projects":[
+    "stack": {
+        "eyebrow": "Tabla periódica del stack",
+        "title": "Los elementos con los que trabajo",
+        "intro": "Agrupados por familia, como en la tabla de Mendeléyev. El número de cada elemento es el año en que lo usé por primera vez en un rol.",
+        "families": {
+            "processing": "Procesamiento",
+            "orchestration": "Orquestación y nube",
+            "storage": "Almacenamiento",
+            "bi": "BI y aplicaciones"
+        },
+        "liveKey": "● brillante = uso diario hoy"
+    },
+    "experience": {
+        "eyebrow": "Espectro de carrera",
+        "title": "De análisis de riesgo a Big Data en R&D",
+        "intro": "Cuatro años en datos: del reporte diario en Excel a frameworks de datos validados bajo GxP.",
+        "figure": "Cada banda es un rol, ubicada en su periodo real. El color avanza del rojo al cian, de menor a mayor energía, y se repite en la lista de abajo.",
+        "ariaLabel": "Espectro de carrera de 2022 a hoy",
+        "axisStart": "ago 2022",
+        "axisNow": "hoy",
+        "jobs": [
             {
-                "imageSrc": "./LogoPJ.png",
-                "title": "PrecioJusto - Plataforma de Seguimiento de Precios",
-                "text": "Desarrollo de aplicación web para comparar precios de productos en tiendas en México. Creación de API para obtener precios de productos en Django y visualización de datos en React.",
-                "icons": ["faReact", "faJs","faDatabase"],
-                "refs": "https://preciojustomx.mx/"
+                "id": "takeda",
+                "title": "Ingeniero de Datos",
+                "company": "Takeda",
+                "org": "Investigación y Desarrollo",
+                "start": "Ene 2026",
+                "end": "presente",
+                "bullets": [
+                    "Pipelines de Big Data con Scala, Spark e Iceberg, orquestados con Airflow.",
+                    "Framework interno que estandariza el acceso a datos de R&D entre equipos.",
+                    "Validación GxP: diseño y ejecución de casos de prueba, documentación y seguimiento de bugs."
+                ],
+                "tech": [
+                    "Scala",
+                    "Spark",
+                    "Iceberg",
+                    "Airflow",
+                    "GxP"
+                ]
             },
             {
-                "imageSrc": "./scraper.jpg",
-                "title": "Plataforma de Seguimiento de Precios",
-                "text": "Desarrollo de una plataforma integral de seguimiento de precios para múltiples tiendas en línea usando scrapers de Python y frontend en React. Características de monitoreo en tiempo real y análisis de datos históricos.",
-                "icons": ["faPython", "faReact", "faDatabase"],
-                "refs": "https://app.powerbi.com/view?r=eyJrIjoiNDRlNDZkYzctZTA5Mi00YzBkLWJhNzQtOTQxYWI1MDFmZjdjIiwidCI6ImNjYTQwNjVjLWFjNzgtNDIzZi04ZTFhLTUxMGQ1ODQxNWY5MyJ9"
+                "id": "mobo",
+                "title": "Ingeniero de Datos Jr",
+                "company": "MOBO",
+                "org": "",
+                "start": "May 2025",
+                "end": "ene 2026",
+                "bullets": [
+                    "Migración de ETL legados de SSIS a Prefect con Python y SQL.",
+                    "Integración de SQL Server, MySQL, PostgreSQL y APIs externas.",
+                    "Modelos en SSAS y reportes automatizados en Power BI."
+                ],
+                "tech": [
+                    "Python",
+                    "Prefect",
+                    "SSIS",
+                    "SSAS",
+                    "Power BI"
+                ]
+            },
+            {
+                "id": "samsung",
+                "title": "Ingeniero BI",
+                "company": "Samsung Electronics México",
+                "org": "",
+                "start": "Nov 2023",
+                "end": "may 2025",
+                "bullets": [
+                    "Análisis de mercado NPD/Circana para tablets y wearables.",
+                    "Scrapers y crawler de precios de la competencia en tiendas mexicanas.",
+                    "Dashboards de ventas e inventario para planeación."
+                ],
+                "tech": [
+                    "Python",
+                    "Web scraping",
+                    "Power BI",
+                    "VBA"
+                ]
+            },
+            {
+                "id": "sopris",
+                "title": "Analista de Datos",
+                "company": "SOPRIS Technologies",
+                "org": "",
+                "start": "Ago 2023",
+                "end": "oct 2023",
+                "bullets": [
+                    "Reportes con Plotly y Dash sobre datos de BigQuery; dashboards en Looker Studio."
+                ],
+                "tech": [
+                    "BigQuery",
+                    "Dash",
+                    "Looker Studio"
+                ]
+            },
+            {
+                "id": "iimas",
+                "title": "Servicio Social",
+                "company": "IIMAS, UNAM",
+                "org": "proyecto Miopers",
+                "start": "Feb 2023",
+                "end": "sep 2023",
+                "bullets": [
+                    "Registro de usuarios y CRUD con React + Django sobre MySQL; análisis de tweets en MongoDB."
+                ],
+                "tech": [
+                    "Django",
+                    "React",
+                    "MongoDB"
+                ]
+            },
+            {
+                "id": "fincomun",
+                "title": "Riesgos y crédito",
+                "company": "Fincomún",
+                "org": "tres roles en 10 meses",
+                "start": "Oct 2022",
+                "end": "jul 2023",
+                "roles": [
+                    {
+                        "title": "Especialista en Minería de Datos y Crédito",
+                        "when": "may–jul 2023"
+                    },
+                    {
+                        "title": "Analista de Riesgos",
+                        "when": "ene–may 2023"
+                    },
+                    {
+                        "title": "Becario de Riesgos",
+                        "when": "oct 2022–ene 2023"
+                    }
+                ],
+                "bullets": [
+                    "Automatización de asignación de créditos con datos de Buró de Crédito y dashboards de deterioro de cartera."
+                ],
+                "tech": [
+                    "Python",
+                    "R",
+                    "Power BI",
+                    "Power Automate"
+                ]
+            },
+            {
+                "id": "generation",
+                "title": "Desarrollo Web Freelance",
+                "company": "Generation",
+                "org": "bootcamp Full-Stack",
+                "start": "Ago 2022",
+                "end": "oct 2022",
+                "bullets": [],
+                "tech": [
+                    "Java",
+                    "MySQL",
+                    "JavaScript",
+                    "Figma"
+                ]
             }
         ]
+    },
+    "education": {
+        "eyebrow": "Formación",
+        "title": "Física de base, software y datos encima",
+        "degreesTitle": "Educación",
+        "certsTitle": "Certificaciones",
+        "new": "nuevo",
+        "degrees": [
+            {
+                "title": "Ingeniería en Desarrollo de Software",
+                "years": "2024–2026",
+                "place": "Universidad Virtual del Estado de Guanajuato (UVEG)"
+            },
+            {
+                "title": "Licenciatura en Física",
+                "years": "2018–2023",
+                "place": "Universidad Nacional Autónoma de México"
+            },
+            {
+                "title": "Bootcamp de Desarrollo Full-Stack",
+                "years": "2022",
+                "place": "Generation"
+            }
+        ],
+        "certs": [
+            {
+                "title": "Agentic AI: Building Data-First AI Agents",
+                "year": "",
+                "issuer": "",
+                "isNew": true
+            },
+            {
+                "title": "Agentic AI Fundamentals: Architectures, Frameworks, and Applications",
+                "year": "",
+                "issuer": "",
+                "isNew": true
+            },
+            {
+                "title": "Domina Scala",
+                "year": "",
+                "issuer": "",
+                "isNew": true
+            },
+            {
+                "title": "Scala Essential Training",
+                "year": "",
+                "issuer": "",
+                "isNew": true
+            },
+            {
+                "title": "Implement Load Balancing on Compute Engine",
+                "year": "",
+                "issuer": "Google Cloud · Skill Badge",
+                "isNew": true
+            },
+            {
+                "title": "Google Data Analytics",
+                "year": "2022",
+                "issuer": "Coursera"
+            },
+            {
+                "title": "NMA Deep Learning",
+                "year": "2022",
+                "issuer": "Neuromatch Academy"
+            },
+            {
+                "title": "Scientific Computing With Python",
+                "year": "2022",
+                "issuer": "freeCodeCamp"
+            }
+        ]
+    },
+    "projects": {
+        "eyebrow": "Proyectos",
+        "title": "Experimentos publicados",
+        "items": [
+            {
+                "image": "/comprahorra.jpg",
+                "title": "ComprAhorra",
+                "text": "Comparador de precios en tiempo real entre tiendas de México para encontrar las mejores ofertas. API en Django y visualización en React.",
+                "tech": [
+                    "Django",
+                    "React",
+                    "SQL"
+                ],
+                "href": "https://www.comprahorra.com/",
+                "link": "comprahorra.com ↗"
+            },
+            {
+                "image": "/cronoteca.jpg",
+                "title": "Cronoteca",
+                "status": "En desarrollo",
+                "text": "Resultados de carreras de running contados como historia. Para el Maratón de la Ciudad de México 2026 (28,916 corredores) muestra distribución de tiempos, pirámide de edad, splits y un buscador de corredores.",
+                "tech": [
+                    "Next.js",
+                    "Vercel",
+                    "Visualización de datos"
+                ],
+                "href": "https://cronoteca-seven.vercel.app/",
+                "link": "cronoteca-seven.vercel.app ↗"
+            },
+            {
+                "image": "/scraper.jpg",
+                "title": "Seguimiento de precios",
+                "text": "Scrapers en Python para varias tiendas en línea con monitoreo e histórico en Power BI.",
+                "tech": [
+                    "Python",
+                    "Scraping",
+                    "Power BI"
+                ],
+                "href": "https://app.powerbi.com/view?r=eyJrIjoiNDRlNDZkYzctZTA5Mi00YzBkLWJhNzQtOTQxYWI1MDFmZjdjIiwidCI6ImNjYTQwNjVjLWFjNzgtNDIzZi04ZTFhLTUxMGQ1ODQxNWY5MyJ9",
+                "link": "Ver tablero ↗"
+            }
+        ]
+    },
+    "contact": {
+        "eyebrow": "Contacto",
+        "title": "¿Tienes datos en movimiento? Hablemos.",
+        "intro": "Cuéntame de tu proyecto, una oportunidad laboral o cualquier duda.",
+        "direct": "También puedes escribirme a",
+        "directOnly": "Escríbeme a",
+        "copy": "Copiar correo",
+        "copied": "Copiado",
+        "selected": "Seleccionado: usa Ctrl+C",
+        "form": {
+            "title": "Envíame un mensaje",
+            "name": "Nombre",
+            "email": "Tu correo",
+            "type": "Motivo",
+            "types": [
+                "Proyecto de datos o colaboración",
+                "Oportunidad laboral",
+                "Otro mensaje"
+            ],
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame qué necesitas: objetivo, datos involucrados y plazos si los tienes.",
+            "send": "Enviar mensaje",
+            "sending": "Enviando…",
+            "success": "Mensaje enviado. Te responderé a {{email}}.",
+            "error": "No se pudo enviar el mensaje. Intenta de nuevo o escríbeme a {{email}}.",
+            "again": "Enviar otro mensaje",
+            "errors": {
+                "name": "Escribe tu nombre.",
+                "email": "Escribe un correo válido, por ejemplo nombre@empresa.com.",
+                "message": "Escribe un mensaje de al menos 10 caracteres."
+            }
+        }
+    },
+    "footer": {
+        "location": "Ciudad de México"
     }
 }
