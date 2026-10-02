@@ -1,25 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import { Atom } from './Atom.jsx';
-import { CONSTANTS, PROFILE } from './data.js';
+import { PROFILE } from './data.js';
+import { Icon } from './Icon.jsx';
 
 export function Hero() {
   const { t } = useTranslation('global');
-  const constants = t('hero.constants', { returnObjects: true });
 
   return (
-    <div className="wrap">
-      <div className="hero">
-        <div>
+    <header className="hero">
+      <div className="wrap hero-grid">
+        <div className="hero-text">
           <span className="state"><i />{t('hero.state')}</span>
-          <div className="idrow">
-            <div className="element" aria-hidden="true">
-              <span className="z"><span>{PROFILE.element.z}</span><span>{PROFILE.element.since}</span></span>
-              <b>{PROFILE.element.symbol}</b>
-              <span className="nm">Jesús Torres</span>
-              <span className="cf">{t('hero.tileRole')}</span>
-            </div>
-            <h1>{PROFILE.name}</h1>
-          </div>
+          <h1>{PROFILE.name}</h1>
+          <h2>{t('hero.role1')}<span>{t('hero.role2')}</span></h2>
           <p className="lede">
             {t('hero.lede1')}<strong>{t('hero.ledeStrong')}</strong>{t('hero.lede2')}
           </p>
@@ -27,26 +19,17 @@ export function Hero() {
             <a className="btn primary" href="#trayectoria">{t('hero.ctaPrimary')}</a>
             <a className="btn ghost" href="#contacto">{t('hero.ctaSecondary')}</a>
           </div>
-          <div className="social">
-            <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href={PROFILE.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <div className="social-links">
+            <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+            <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Icon name="github" /></a>
+            <a href={`mailto:${PROFILE.email}`} aria-label="Email"><Icon name="mail" /></a>
             <span className="mono">{t('hero.location')}</span>
           </div>
         </div>
-
-        <div className="atom">
-          <Atom />
-        </div>
+        {/* El átomo lo dibuja Pipeline.jsx sobre este hueco */}
+        <div className="atom-slot" data-atom aria-hidden="true" />
       </div>
-
-      <dl className="consts">
-        {CONSTANTS.map((c, i) => (
-          <div key={c.sym}>
-            <dt><span className="sym">{c.sym}</span>{c.value}</dt>
-            <dd>{constants[i]}</dd>
-          </div>
-        ))}
-      </dl>
-    </div>
+      <a className="scroll-hint mono" href="#trayectoria">{t('hero.scroll')}<span aria-hidden="true">↓</span></a>
+    </header>
   );
 }

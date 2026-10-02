@@ -1,7 +1,6 @@
 {
     "nav": {
         "sections": "Secciones",
-        "stack": "Stack",
         "experience": "Trayectoria",
         "education": "Formación",
         "projects": "Proyectos",
@@ -11,40 +10,20 @@
     },
     "hero": {
         "state": "Estado actual: Ingeniero de Datos en Takeda",
-        "tileRole": "[Data Eng.]",
+        "role1": "Física + ",
+        "role2": "Ingeniería de Datos",
         "lede1": "Físico de formación, ingeniero de datos de oficio. Construyo ",
         "ledeStrong": "pipelines de datos a escala",
         "lede2": " con Scala, Spark, Iceberg y Airflow para Investigación y Desarrollo.",
         "ctaPrimary": "Ver trayectoria",
         "ctaSecondary": "Escríbeme",
         "location": "Ciudad de México",
-        "constants": [
-            "de jetoga99, y número atómico del einstenio",
-            "primer rol trabajando con datos",
-            "roles en 7 organizaciones",
-            "Licenciatura en Física, 2018–2023"
-        ]
-    },
-    "stack": {
-        "eyebrow": "Tabla periódica del stack",
-        "title": "Los elementos con los que trabajo",
-        "intro": "Agrupados por familia, como en la tabla de Mendeléyev. El número de cada elemento es el año en que lo usé por primera vez en un rol.",
-        "families": {
-            "processing": "Procesamiento",
-            "orchestration": "Orquestación y nube",
-            "storage": "Almacenamiento",
-            "bi": "BI y aplicaciones"
-        },
-        "liveKey": "● brillante = uso diario hoy"
+        "scroll": "Desliza: el átomo se vuelve pipeline"
     },
     "experience": {
-        "eyebrow": "Espectro de carrera",
+        "eyebrow": "Pipeline de carrera",
         "title": "De análisis de riesgo a Big Data en R&D",
         "intro": "Cuatro años en datos: del reporte diario en Excel a frameworks de datos validados bajo GxP.",
-        "figure": "Cada banda es un rol, ubicada en su periodo real. El color avanza del rojo al cian, de menor a mayor energía, y se repite en la lista de abajo.",
-        "ariaLabel": "Espectro de carrera de 2022 a hoy",
-        "axisStart": "ago 2022",
-        "axisNow": "hoy",
         "jobs": [
             {
                 "id": "takeda",
@@ -259,6 +238,7 @@
     "projects": {
         "eyebrow": "Proyectos",
         "title": "Experimentos publicados",
+        "intro": "Cada rama del pipeline desemboca en un proyecto publicado.",
         "items": [
             {
                 "image": "/comprahorra.jpg",

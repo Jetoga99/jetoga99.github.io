@@ -8,12 +8,12 @@ export function Education() {
   return (
     <section id="formacion">
       <div className="wrap">
-        <div className="sec-head">
+        <div className="sec-head" data-reveal>
           <span className="eyebrow">{t('education.eyebrow')}</span>
           <h2>{t('education.title')}</h2>
         </div>
         <div className="two">
-          <div>
+          <div className="panel" data-reveal>
             <h3 className="subhead">{t('education.degreesTitle')}</h3>
             <div className="list">
               {degrees.map((d) => (
@@ -25,7 +25,7 @@ export function Education() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="panel" data-reveal>
             <h3 className="subhead">{t('education.certsTitle')}</h3>
             <div className="list">
               {certs.map((c) => (

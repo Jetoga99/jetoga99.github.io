@@ -1,7 +1,6 @@
 {
     "nav": {
         "sections": "Sections",
-        "stack": "Stack",
         "experience": "Experience",
         "education": "Education",
         "projects": "Projects",
@@ -11,40 +10,20 @@
     },
     "hero": {
         "state": "Current state: Data Engineer at Takeda",
-        "tileRole": "[Data Eng.]",
+        "role1": "Physics + ",
+        "role2": "Data Engineering",
         "lede1": "Physicist by training, data engineer by trade. I build ",
         "ledeStrong": "scalable data pipelines",
         "lede2": " with Scala, Spark, Iceberg, and Airflow for Research & Development.",
         "ctaPrimary": "See experience",
         "ctaSecondary": "Get in touch",
         "location": "Mexico City",
-        "constants": [
-            "from jetoga99, and einsteinium's atomic number",
-            "first role working with data",
-            "roles across 7 organizations",
-            "B.Sc. Physics, 2018–2023"
-        ]
-    },
-    "stack": {
-        "eyebrow": "Periodic table of the stack",
-        "title": "The elements I work with",
-        "intro": "Grouped by family, as in Mendeleev's table. Each element's number is the year I first used it in a role.",
-        "families": {
-            "processing": "Processing",
-            "orchestration": "Orchestration & cloud",
-            "storage": "Storage",
-            "bi": "BI & apps"
-        },
-        "liveKey": "● glowing = daily use today"
+        "scroll": "Scroll: the atom becomes a pipeline"
     },
     "experience": {
-        "eyebrow": "Career spectrum",
+        "eyebrow": "Career pipeline",
         "title": "From risk analysis to Big Data in R&D",
         "intro": "Four years in data: from daily Excel reports to GxP-validated data frameworks.",
-        "figure": "Each band is a role, placed on its real time span. Color moves from red to cyan, from lower to higher energy, and repeats in the list below.",
-        "ariaLabel": "Career spectrum from 2022 to today",
-        "axisStart": "Aug 2022",
-        "axisNow": "now",
         "jobs": [
             {
                 "id": "takeda",
@@ -259,6 +238,7 @@
     "projects": {
         "eyebrow": "Projects",
         "title": "Published experiments",
+        "intro": "Each branch of the pipeline ends in a published project.",
         "items": [
             {
                 "image": "/comprahorra.jpg",

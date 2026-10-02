@@ -21,7 +21,6 @@ export function Topbar() {
           <span className="mini" aria-hidden="true">Jt</span>jetoga.dev
         </a>
         <nav className="nav" aria-label={t('nav.sections')}>
-          <a href="#stack">{t('nav.stack')}</a>
           <a href="#trayectoria">{t('nav.experience')}</a>
           <a href="#formacion">{t('nav.education')}</a>
           <a href="#proyectos">{t('nav.projects')}</a>
